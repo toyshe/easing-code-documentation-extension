@@ -1,0 +1,42 @@
+{
+  "name": "code-documentation",
+  "displayName": "code-documentation",
+  "description": "Allowing code fragments to be extracted from source code to ease code documentation",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.96.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:code-documentation.extractCode",
+    "onCommand:code-documentation.toggleAutoUpdate"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "code-documentation.extractCode",
+        "title": "Extract Code"
+      },
+      {
+        "command": "code-documentation.syncDocumentation",
+        "title": "Update Code"
+      }
+    ]
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.96.0",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "20.x",
+    "eslint": "^9.16.0",
+    "@vscode/test-cli": "^0.0.10",
+    "@vscode/test-electron": "^2.4.1"
+  }
+}
