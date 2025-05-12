@@ -1,65 +1,37 @@
 # code-documentation README
 
-This is the README for your extension "code-documentation". After writing up a brief description, we recommend including the following sections.
+A lightweight VS Code extension that helps developers maintain consistent documentation by extracting code snippets using custom comment markers and inserting or updating them in Markdown files.
 
 ## Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+1. Extract code from the source code files using comment markers
+2. Insert code in a markdown document file
+3. Update code in the markdown file to sync with the source code
 
-For example if there is an image subfolder under your extension project workspace:
+## Getting Started
 
-\!\[feature X\]\(images/feature-x.png\)
+1. Clone the Repository: 
+`https://github.com/toyshe/easing-code-documentation-extension.git`
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+2. Install the dependencies:
+`npm install`
 
-## Requirements
+## Usage
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+1. Run the extension using F5
 
-## Extension Settings
+2. Open your project in the new window that opens up after running the extension
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+3. Wrap the fragment of code you want to extract with a comment marker like this:
+`/* extract-start <6-digit comment id>*/` and `/* extract-end <6-digit comment id>*/` 
 
-For example:
+4. Open the commend palette and run the command Extract Code 
 
-This extension contributes the following settings:
+5. To update any code in the markdown, run the command Update Code in the command palette.
 
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
+## Future Developments
 
-## Known Issues
+1. Publish the extension in the VS Code Extension Marketplace
+2. Add a feature that would wrap a fragment of code with a comment marker automatically
+3. Add a feature that allows an option to update all the code in the markdown file
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
-
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
----
-
-## Working with Markdown
-
-You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux)
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux)
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets
-
-## For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**

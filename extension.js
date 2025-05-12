@@ -148,7 +148,10 @@ async function extractCodeFragment(marker) {
           return { extension: null, extractedFragment: null };
         }
         collecting = false;
-        fragments.push({ extension, extractedFragment: collectedLines.join("\n").trim() });
+        fragments.push({
+          extension,
+          extractedFragment: collectedLines.join("\n").trim(),
+        });
         collectedLines = [];
         continue; // Don't include end tag itself
       }
@@ -180,8 +183,6 @@ async function extractCodeFragment(marker) {
     return fragments[0]; // Only one fragment found
   }
 }
-
-
 
 function insertCodeAtCursor(extension, editor, code) {
   const position = editor.selection.active;
